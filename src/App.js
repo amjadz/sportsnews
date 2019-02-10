@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import CurrentSportsNews from './CurrentSportsNews';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 import './App.css';
 
