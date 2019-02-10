@@ -6,9 +6,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Welcome!</h1>
-          <input placeholder="Search.."></input>
-          <button type="submit">Search</button>
+          <div className="moveItems">
+              <h1>Welcome!</h1>
+              <input placeholder="Search..."></input>
+              <button type="submit">Search</button>
+          </div>
         </header>
       </div>
     );
