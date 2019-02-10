@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import CurrentSportsNews from './CurrentSportsNews';
 
 import './App.css';
 
@@ -26,15 +27,15 @@ handleFormSubmit(item) {
     .then((json) => {
       console.log(json)
         this.setState({
-          
-            name: json.author,
-            title: json.title, 
-            desc: json.description,
-            url: json.url
+
+            name: json.articles[2].author,
+            title: json.articles[2].title, 
+            description: json.articles[2].description,
+            url: json.articles[2].url
         });
     })
     .catch((error) => {
-      window.alert("Enter a real city please!");
+      window.alert("Please enter a vaild article!");
       this.setState({
           name: null,
           title: null,
@@ -52,8 +53,15 @@ handleFormSubmit(item) {
             <Search 
                 handleFormSubmit={(item) => {
                 this.handleFormSubmit(item); 
-                
                 }}/>
+
+            <CurrentSportsNews
+                name={this.state.name}
+                title = {this.state.title}
+                description= {this.state.description}
+                url={this.state.url}
+            />
+                
 
         </header>
       </div>
