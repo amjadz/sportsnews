@@ -17,21 +17,19 @@ class App extends Component {
 
 handleFormSubmit(item) {
     var url = 'https://newsapi.org/v2/everything?q=' + item +'&from=2019-01-10&sortBy=publishedAt&apiKey=' + key;
-  
     fetch(url)
     .then((response) => {
-        console.log(response);
         return response.json();
 
     })
     .then((json) => {
-      console.log(json)
+        console.log(json)
         this.setState({
-
-            name: json.articles[2].author,
-            title: json.articles[2].title, 
-            description: json.articles[2].description,
-            url: json.articles[2].url
+            name: json.articles[0].author,
+            title: json.articles[0].title, 
+            description: json.articles[0].description,
+            url: json.articles[0].url,
+            urlToImage: json.articles[0].urlToImage
         });
     })
     .catch((error) => {
@@ -56,6 +54,7 @@ handleFormSubmit(item) {
                 }}/>
 
             <CurrentSportsNews
+                urlToImage={this.state.urlToImage}
                 name={this.state.name}
                 title = {this.state.title}
                 description= {this.state.description}
