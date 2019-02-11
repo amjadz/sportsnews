@@ -7,7 +7,7 @@ class CurrentSportsNews extends Component{
     render(){
         return(
             <div className="articles">
-                <Col sm = "6">
+                <Col sm="6">
                 <Card>
                     <CardImg  src={this.props.urlToImage} alt="Card image cap" />
                     <CardBody>

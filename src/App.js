@@ -8,24 +8,28 @@ import './App.css';
 
 var key = '973163c29a164868b20716a8d64a5851';
 
+var articles = [];
+
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-        articles: []
+        articles
     };
+
 }
 
 handleFormSubmit(item) {
-    var url = 'https://newsapi.org/v2/everything?q=' + item +'&from=2019-01-10&sortBy=publishedAt&apiKey=' + key;
+    var url = 'https://newsapi.org/v2/everything?q=' + item + '&from=2019-01-11&sortBy=publishedAt&apiKey=' + key
+
+
     fetch(url)
     .then((response) => {
         return response.json();
 
     })
     .then((json) => {
-        console.log(json)
         this.setState({
             name: json.articles[0].author,
             title: json.articles[0].title, 

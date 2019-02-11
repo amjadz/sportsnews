@@ -4,7 +4,7 @@
 
 .App-header {
   background-image: url("images/soccer.jpg");
-  height: 710px;
+  height: 810px;
   width: 1440px;
   background-size: cover;
   display: flex;
@@ -29,7 +29,6 @@
 
 img{
   height: 300px;
-  width: 100px;
 
 }
 
