@@ -4,7 +4,7 @@ A web application built in react which allows peoeple to search for news related
 
 **App**
 
-![APP GIF](chatty.gif)
+![APP GIF](Sports-News.gif)
 
 ---
 
