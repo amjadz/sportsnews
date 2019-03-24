@@ -11,15 +11,20 @@ class SearchBar extends React.Component {
 
     render(){
         return(
-            <div>
-                <form onSubmit= { this.onSearchSubmit } >
-                    <input 
-                        type="text" 
-                        value = { this.state.searchTerm }
-                        onChange={(e) => this.setState({searchTerm: e.target.value})}
-                        placeholder="Search" > 
-                    </input>
-                </form>
+            <div className="container fluid">
+                <h3 style={{ textAlign: "center" }} className="mt-5">Press Enter To Search</h3>
+                <div className="form-group mt-5">
+                    <form onSubmit= { this.onSearchSubmit } >
+                        <input 
+                            className="form-control"
+                            type="text" 
+                            value = { this.state.searchTerm }
+                            onChange={(e) => this.setState({searchTerm: e.target.value})}
+                            placeholder="Search" > 
+                        </input>
+                    </form>
+                
+                </div>
             </div>
         )
     }
