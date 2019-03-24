@@ -1,4 +1,4 @@
-# ChattyChat Android
+# Sports News
 
 A web application built in react which allows peoeple to search for news related to sports.
 
